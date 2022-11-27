@@ -29,7 +29,7 @@ public class Q02_Map_UrunFiyatlariniToplaEntrySet {
         System.out.println("urunler ve fiyatlar : " + map);
 
         double toplam = 0;
-        for( Map.Entry<String, Double> w:map.entrySet()){
+        for( Map.Entry<String, Double> w : map.entrySet()){
             toplam +=w.getValue();
         }
         return toplam;

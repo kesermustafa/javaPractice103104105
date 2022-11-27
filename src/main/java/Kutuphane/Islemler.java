@@ -2,6 +2,8 @@ package Kutuphane;
 
 import java.util.*;
 
+import static Kutuphane.KitapEkle.kitap;
+
 public class Islemler {
 
     /*
@@ -10,10 +12,15 @@ public class Islemler {
      *
      */
 
+    public static final String R = "\u001B[31m";
+    public static final String G = "\u001B[32m";
+    public static final String Y = "\u001B[33m";
+    public static final String B = "\u001B[34m";
+
     static Scanner input = new Scanner(System.in);
 
     public static void menu() {
-        System.out.println("Lutfen yapmak istediginiz islemi secinz.\n1= Kitap ekle\n2= Numara ile kitap goruntule\n3= bilgi ile kitap goruntule\n" +
+        System.out.println("Lutfen yapmak istediginiz islemi seciniz.\n1= Kitap ekle\n2= Numara ile kitap goruntule\n3= bilgi ile kitap goruntule\n" +
                 "4= Numara ile kitap sil\n5= Tum kitaplari listele\n6= Cikis");
 
         int secim = input.nextInt();
@@ -21,7 +28,6 @@ public class Islemler {
         switch (secim) {
             case 1:
                 KitapEkle.kitapEkle();
-                menu();
                 break;
             case 2:
                 noIleGoruntule();
@@ -36,15 +42,17 @@ public class Islemler {
                 menu();
                 break;
             case 5:
-                for (Map.Entry<Integer, Kitap> w : KitapEkle.kitap.entrySet()) {
-                    System.out.println(w);
+                for (Map.Entry<Integer, Kitap> w : kitap.entrySet()) {
+                    System.out.println(B+w);
                 }
                 menu();
+                break;
             case 6:
                 System.out.println("Tesekkur ederiz...");
                 break;
+
             default:
-                System.out.println("Gecersz secim yaptiniz..");
+                System.out.println("Gecersiz secim yaptiniz..");
         }
     }
 
@@ -54,21 +62,26 @@ public class Islemler {
         System.out.println("Kitab ismini veya yazar adini giriniz...");
         String name = input.nextLine();
 
-        Collection<Kitap> bilgi = KitapEkle.kitap.values();
+             for(Map.Entry<Integer, Kitap> w : KitapEkle.kitap.entrySet()){
 
-             for (Kitap w : bilgi) {
-                if (w.yazarAdi.equalsIgnoreCase(name) || w.kitapAdi.equalsIgnoreCase(name)) {
-                    System.out.println(w);
-                }
-            }
-        }
+                 if (w.getValue().yazarAdi.equalsIgnoreCase(name)) {
+                     System.out.println(w);
+
+                 }else if(w.getValue().kitapAdi.equalsIgnoreCase(name)){
+                     System.out.println(R+"-----------* Aradiginiz kitaba ait bilgiler * -------------");
+                     System.out.println(w);
+                 }else{
+
+                 }
+             }
+    }
 
     public static void noIleGoruntule() {
         System.out.println("Kitap no giriniz...");
         int num = input.nextInt();
 
-        if (KitapEkle.kitap.containsKey(num)) {
-            System.out.println(num + " nolu " + KitapEkle.kitap.get(num));
+        if (kitap.containsKey(num)) {
+            System.out.println(num + " " + kitap.get(num));
 
         } else {
             System.out.println(num + " nolu kitap bulunmamaktadir.");
@@ -80,8 +93,8 @@ public class Islemler {
         System.out.println("Silmek istediginiz kitap no giriniz...");
         int num = input.nextInt();
 
-        if (KitapEkle.kitap.containsKey(num)) {
-            KitapEkle.kitap.remove(num);
+        if (kitap.containsKey(num)) {
+            kitap.remove(num);
         } else {
             System.out.println(num + "nolu kitap bulunmamaktadir.");
         }

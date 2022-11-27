@@ -51,10 +51,10 @@ public class Kitap {
 
     @Override
     public String toString() {
-        return "Kitap{" +
-                "kitapAdi='" + kitapAdi + '\'' +
-                ", yazarAdi='" + yazarAdi + '\'' +
-                ", fiyat=" + fiyat +
+        return "nolu Kitap{" +
+                "Kitap Adi = '" + kitapAdi + '\'' +
+                ", Yazar Adi = '" + yazarAdi + '\'' +
+                ", Fiyati = " + fiyat +
                 '}';
     }
 }

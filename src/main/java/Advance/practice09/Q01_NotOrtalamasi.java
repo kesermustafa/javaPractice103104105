@@ -19,7 +19,6 @@ public class Q01_NotOrtalamasi {
     public static void ortalamaHesapla(String isim, double... not){
 
         double toplam = 0;
-
         for(double w : not){
             toplam+=w;
         }

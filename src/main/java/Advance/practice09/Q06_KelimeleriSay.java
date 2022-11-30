@@ -24,6 +24,8 @@ public class Q06_KelimeleriSay {
        String[] arr = yeniString.split(" ");
        Map<String, Integer> map = new HashMap<>();
 
+
+
        for(String w : arr){
 
            if(!map.containsKey(w)){
@@ -34,6 +36,8 @@ public class Q06_KelimeleriSay {
            }
        }
         System.out.println(map);
+
+
 
     }
 

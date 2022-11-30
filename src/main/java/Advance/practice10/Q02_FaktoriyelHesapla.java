@@ -8,7 +8,9 @@ public class Q02_FaktoriyelHesapla {
 
     public static void main(String[] args) throws Exception {
 
-        System.out.println(faktoriyel(-5));
+        System.out.println(faktoriyel(5));
+
+
 
     }
 
@@ -23,7 +25,11 @@ public class Q02_FaktoriyelHesapla {
         } else{
             throw new Exception (" sayi 0 dan buyuk olmali");
         }
-
-
     }
+
+
+
+
+
+
 }

@@ -26,15 +26,30 @@ public class Q01_Map_KeyYazdir {
         System.out.println("Fiyatlari 29.00 olan urunler");
 
         for(Map.Entry<String, Double> w : urunler.entrySet()){
-
             if(w.getValue()==29.99){
                 System.out.println(w.getKey() + " " +  w.getValue());
             }
+        }
+        System.out.println("--------------");
 
 
+
+        Map<String, Double> sepet = new HashMap<>();
+
+        for(Map.Entry<String, Double> w : urunler.entrySet()){
+            if(w.getKey().equals("Kazak")||w.getKey().equals("Terlik")){
+                sepet.put(w.getKey(), w.getValue());
+            }
+            System.out.print(w);
+            System.out.println();
         }
 
-
+        double toplam = 0;
+        for(Map.Entry<String, Double> w : sepet.entrySet()) {
+            toplam += w.getValue();
+        }
+        System.out.println("sepetinizdeki urunler"+ sepet);
+        System.out.println(toplam);
 
 
     }

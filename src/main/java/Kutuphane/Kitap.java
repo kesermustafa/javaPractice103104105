@@ -31,7 +31,7 @@ public class Kitap {
     static int kitapNo;
     static int counter = 1000;
 
-    Scanner input = new Scanner(System.in);
+
 
     public Kitap(String kitapAdi, String yazarAdi, double fiyat) {
         this.kitapAdi = kitapAdi;
@@ -41,13 +41,7 @@ public class Kitap {
         counter++;
     }
 
-    public Scanner getInput() {
-        return input;
-    }
 
-    public void setInput(Scanner input) {
-        this.input = input;
-    }
 
     @Override
     public String toString() {

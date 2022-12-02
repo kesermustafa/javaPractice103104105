@@ -9,7 +9,6 @@ public class Islemler {
     /*
      * * 1-kitap ekle		 * 2-numara ile kitap goruntule		 * 3-bilgi ile kitap goruntule
      * * 4-numara ile kitap sil	* 5-tum kitaplari listele		 * 6-cikis
-     *
      */
 
     public static final String R = "\u001B[31m";

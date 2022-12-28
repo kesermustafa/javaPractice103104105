@@ -41,5 +41,25 @@ public class Map01 {
         list.sort(Comparator.comparing(String::valueOf));
         System.out.println(list);
 
+        for(Map.Entry<String, Integer> w : studentAge.entrySet()){
+
+            System.out.println(w.getValue());
+
+        }
+
+
+        List<String> list1 = new ArrayList<>();
+        for(String w : studentAge.keySet()){
+            if(w!=null){
+                list1.add(w);
+            }
+        }
+
+//       Collections.sort(list1);
+//       list1.sort(Comparator.comparing(String::length));
+
+        Collections.sort(list1, Collections.reverseOrder(Comparator.comparing(String::length)));
+        System.out.println(list1);
+
     }
 }

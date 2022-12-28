@@ -13,7 +13,7 @@ public class Q02_UzunKelime {
 
         System.out.println(enUzunKelimeler());
 
-       // uzunKelime("Java cok kolaydir anlayana tabi!");
+       // uzunKelime("Java cok kolaydir anlayan tabi!");
 
     }
 

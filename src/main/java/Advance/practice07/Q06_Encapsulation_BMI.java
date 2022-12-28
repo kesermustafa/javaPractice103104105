@@ -15,7 +15,7 @@ public class Q06_Encapsulation_BMI {
         BMI kisi1 = new BMI(kilo, boy);
         kisi1.bMIHesapla();
 
-        kisi1.bMIHesapla();
+
 
 
 

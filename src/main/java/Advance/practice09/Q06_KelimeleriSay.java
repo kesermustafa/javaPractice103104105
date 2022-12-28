@@ -24,21 +24,14 @@ public class Q06_KelimeleriSay {
        String[] arr = yeniString.split(" ");
        Map<String, Integer> map = new HashMap<>();
 
-
-
        for(String w : arr){
-
            if(!map.containsKey(w)){
                map.put(w, 1);
-
            }else {
                map.put(w, map.get(w)+1);
            }
        }
         System.out.println(map);
-
-
-
     }
 
 

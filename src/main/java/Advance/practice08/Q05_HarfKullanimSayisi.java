@@ -38,8 +38,5 @@ public class Q05_HarfKullanimSayisi {
         }
         System.out.println(cikti);
 
-
-
-
     }
 }

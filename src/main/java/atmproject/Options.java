@@ -15,12 +15,10 @@ public class Options extends Account{
     HashMap<Integer, Integer> data = new HashMap<>();
 
 
-
-
     public void login(){
 
         System.out.println("Techproed ATM'e hos geldiniz..");
-
+        int count = 0;
         do {
             data.put(12345, 1234);
             data.put(23456, 2345);
@@ -53,23 +51,22 @@ public class Options extends Account{
                 }
             }
                 if(counter==data.size()){
+                    count++;
                 System.out.println("Yanlis hesap numarasi veya pin numarasi girdiniz..");
+                System.out.println("Herhangi bir rakama tiklayip isleme devam ediniz veya Q ya tiklayip cikiniz.");
+                String exit = input.next();
+                if(exit.equalsIgnoreCase("Q")){
+                    flag = false;
+                }
+                }
 
-            }
-
-
-
+                if(count==3){
+                    System.out.println("3 kez hatali bilgi girilmistir ve hesabiniz dondurulmustur.");
+                    flag=false;
+                }
 
         }while (flag);
-
-
-
-
     }
-
-
-
-
 
 
 
@@ -156,7 +153,6 @@ public class Options extends Account{
             default:
                 System.out.println("yanlis secim yaptiniz, 1,2 veya 3'u secebilirsiniz.");
         }
-
     }
 
 

@@ -163,7 +163,7 @@ public class Options extends Account{
 
 
 
-    // kisi iocin secenekleri goruntule
+    // kisi icin secenekleri goruntule
     public void displayMesage(){
         System.out.println("Options seciniz!");
         System.out.println("1: View Balance "); // / bakiyenizi kontro ediniz.

@@ -67,7 +67,7 @@ public class Account {
         return checkingBalance;
     }
 
-    // para cekme saving hesabindan para cekildikten sot=ra kalan bakiye
+    // para cekme saving hesabindan para cekildikten sonra kalan bakiye
     private double calculateSavingBalanceAfterWithdraw(double amount){
         savingBalance = savingBalance - amount;
         return savingBalance;
